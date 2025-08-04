@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pustaka Kristen Digital - Ebook Rohani untuk Pertumbuhan Iman</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Pustaka Kristen Digital menyediakan e-book rohani untuk pertumbuhan iman Anda. Koleksi renungan, studi Alkitab, teologi, dan panduan hidup Kristen. Beli sekarang, dan tingkatkan pemahaman Alkitab Anda.">
+    <meta name="keywords" content="ebook kristen, pustaka kristen, download ebook kristen, buku rohani digital, renungan harian, belajar alkitab, bahan khotbah">
+    <meta name="author" content="Pustaka Kristen Digital">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags (untuk sharing di media sosial) -->
+    <meta property="og:title" content="Pustaka Kristen Digital - Ebook Rohani untuk Pertumbuhan Iman">
+    <meta property="og:description" content="Temukan e-book rohani berkualitas untuk pertumbuhan iman Anda. Jelajahi koleksi renungan, studi Alkitab, dan panduan hidup Kristen dari Pustaka Kristen Digital.">
+    <meta property="og:image" content="https://www.pustakakristendigital.com/images/og-image-homepage.png">
+    <meta property="og:url" content="https://www.pustakakristendigital.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pustaka Kristen Digital - Ebook Rohani untuk Pertumbuhan Iman">
+    <meta name="twitter:description" content="Temukan e-book rohani berkualitas untuk pertumbuhan iman Anda. Jelajahi koleksi renungan, studi Alkitab, dan panduan hidup Kristen dari Pustaka Kristen Digital.">
+    <meta name="twitter:image" content="https://www.pustakakristendigital.com/images/og-image-homepage.png">
+
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center">
+                    <img src="./images/logo-pustaka-digital-kristen.webp" alt="Pustaka Kristen Digital Logo" class="w-28 h-28">
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition duration-300">Beranda</a>
+                    <a href="#categories" class="text-gray-600 hover:text-blue-600 transition duration-300">Kategori</a>
+                    <a href="#books" class="text-gray-600 hover:text-blue-600 transition duration-300">Ebook</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimoni</a>
+                </nav>
+
+                <!-- Right-side Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="relative text-gray-600 hover:text-blue-600 transition duration-300" id="cart-icon">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                    </a>
+                    <!-- Hamburger Button -->
+                    <button class="md:hidden" id="hamburger">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-blue-500">Beranda</a>
+                <a href="#categories" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-blue-500">Kategori</a>
+                <a href="#books" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-blue-500">Ebook</a>
+                <a href="#testimonials" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-blue-500">Testimoni</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center py-16 md:py-20" id="home">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Bacaan untuk Pertumbuhan Iman Anda</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Jelajahi koleksi e-book Kristiani untuk memperdalam iman, hikmat, dan pemahaman Anda akan Firman Tuhan.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="#books" class="w-full md:w-auto bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 text-lg">Jelajahi Ebook</a>
+                <a href="#categories" class="w-full md:w-auto border-2 border-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 text-lg">Lihat Fokus Bacaan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-20" id="categories">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Fokus Bacaan</h2>
+            <div id="categories-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+                <!-- Categories will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section class="bg-gray-100 py-20" id="books">
+        <div class="container mx-auto px-4">
+                        <div class="flex justify-center items-center mb-12">
+                <h2 class="text-4xl font-bold text-center">Ebook Pilihan</h2>
+                <button id="refresh-books-btn" class="ml-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors" title="Refresh data buku">
+                    Refresh
+                </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="books-grid">
+                <!-- Books will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20" id="testimonials">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Apa Kata Pembaca</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <p class="text-gray-600 mb-6 italic">"E-book di Pustaka Kristen Digital benar-benar memberkati. Saya menemukan banyak sekali bacaan untuk menolong waktu saat teduh saya setiap hari."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/100/4361ee/ffffff?text=AN" alt="Andi" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Andi Nugroho</h4>
+                            <p class="text-gray-500 text-sm">Pembaca Setia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <p class="text-gray-600 mb-6 italic">"Sebagai seorang pelayan jemaat, saya sangat terbantu dengan koleksi studi Alkitab dan apologetika yang mendalam. Sangat direkomendasikan!"</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/100/7209b7/ffffff?text=BS" alt="Budi" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Budi Santoso</h4>
+                            <p class="text-gray-500 text-sm">Pelayan Tuhan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <p class="text-gray-600 mb-6 italic">"Akhirnya ada platform yang fokus pada bacaan rohani berkualitas. Tulisannya mudah dipahami dan sangat relevan untuk kehidupan sehari-hari."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/100/06d6a0/ffffff?text=CI" alt="Citra" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Citra Indah</h4>
+                            <p class="text-gray-500 text-sm">Mahasiswa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-2">Langganan Newsletter</h2>
+            <p class="mb-6 max-w-xl mx-auto">Dapatkan info e-book terbaru, renungan mingguan, dan penawaran khusus langsung ke email Anda.</p>
+            <form class="flex justify-center" id="newsletter-form">
+                <input type="email" placeholder="Masukkan email Anda" required class="w-full max-w-md px-4 py-3 rounded-l-md text-gray-800 focus:outline-none">
+                <button type="submit" class="bg-indigo-800 hover:bg-indigo-900 text-white font-bold py-3 px-6 rounded-r-md transition duration-300">Berlangganan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-white text-xl mb-4">Pustaka Kristen Digital</h3>
+                    <p class="text-sm">Platform e-book Kristiani untuk membantu Anda bertumbuh dalam iman dan pengenalan akan Tuhan.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-xl mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white">Beranda</a></li>
+                        <li><a href="#categories" class="hover:text-white">Kategori</a></li>
+                        <li><a href="#books" class="hover:text-white">Ebook</a></li>
+                        <li><a href="#testimonials" class="hover:text-white">Testimoni</a></li>
+                        <li><a href="#" class="hover:text-white">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-xl mb-4">Kategori</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Renungan</a></li>
+                        <li><a href="#" class="hover:text-white">Studi Alkitab</a></li>
+                        <li><a href="#" class="hover:text-white">Kehidupan Kristen</a></li>
+                        <li><a href="#" class="hover:text-white">Keluarga</a></li>
+                        <li><a href="#" class="hover:text-white">Kesaksian</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-xl mb-4">Kontak Kami</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> pustakakristendigital@gmail.com</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-2"></i> -</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Surabaya, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm">
+                <p>&copy; 2025 Pustaka Kristen Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="fixed top-0 right-0 h-full w-96 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50" id="cart-sidebar">
+        <div class="flex justify-between items-center p-4 border-b">
+            <h3 class="text-xl font-bold">Keranjang Belanja</h3>
+            <button class="text-gray-500 hover:text-gray-800" id="cart-close"><i class="fas fa-times text-2xl"></i></button>
+        </div>
+        <div class="p-4 overflow-y-auto h-[calc(100vh-160px)]" id="cart-items">
+            <!-- Cart items will be inserted here by JavaScript -->
+        </div>
+        <div class="p-4 border-t">
+            <div class="flex justify-between items-center font-bold text-lg mb-4">
+                <span>Total:</span>
+                <span id="cart-total-price">Rp0</span>
+            </div>
+            <button class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors" id="cart-checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" id="overlay"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden fixed bottom-5 right-5 bg-gray-800 text-white py-3 px-5 rounded-lg shadow-lg items-center">
+        <i class="fas fa-check-circle text-green-500 mr-3"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Formulir Pemesanan</h3>
+                <button id="modal-close-btn" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <form id="checkout-form">
+                <div class="mb-4">
+                    <label for="customer-name" class="block text-gray-700 font-bold mb-2">Nama Lengkap</label>
+                    <input type="text" id="customer-name" placeholder="Masukkan nama Anda" required class="w-full px-4 py-2 border rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="customer-email" class="block text-gray-700 font-bold mb-2">Alamat Email</label>
+                    <input type="email" id="customer-email" placeholder="Kami akan mengirim e-book ke email ini" required class="w-full px-4 py-2 border rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-6">
+                    <label for="customer-whatsapp" class="block text-gray-700 font-bold mb-2">No. WhatsApp</label>
+                    <input type="tel" id="customer-whatsapp" placeholder="Contoh: 081234567890" required class="w-full px-4 py-2 border rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="text-center">
+                    <button type="submit" id="submit-order-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                        <span id="order-submit-text">Pesan Sekarang</span>
+                        <span id="order-submit-spinner" class="hidden"><i class="fas fa-spinner fa-spin mr-2"></i>Memproses...</span>
+                    </button>
+                </div>
+            </form>
+            <div id="order-status" class="mt-6 text-center"></div>
+        </div>
+    </div>
+
+    <!-- Memuat file JavaScript utama -->
+    <script src="script.js"></script> 
+</body>
+</html>
