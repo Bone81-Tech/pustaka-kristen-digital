@@ -166,7 +166,7 @@ function updateCartDisplay() {
             itemElement.classList.add('flex', 'justify-between', 'items-center', 'py-2', 'border-b', 'border-gray-200');
             itemElement.innerHTML = `
                 <div>
-                    <h4 class="font-semibold">${item.title}</h4>
+                    <h4 class="font-semibold">${DOMPurify.sanitize(item.title)}</h4>
                     <p class="text-sm text-gray-600">${formatRupiah(item.price)} x ${item.quantity}</p>
                 </div>
                 <button class="bg-red-500 hover:bg-red-600 text-white text-xs px-2 py-1 rounded" data-id="${item.id}">Hapus</button>
@@ -256,7 +256,7 @@ async function loadBooksAndCategories() {
         }
     } catch (error) {
         console.error('Error memuat data:', error);
-        booksGrid.innerHTML = `<p class="text-center col-span-full text-red-600">Gagal memuat e-book: ${error.message}</p>`;
+        booksGrid.innerHTML = `<p class="text-center col-span-full text-red-600">Gagal memuat e-book: ${DOMPurify.sanitize(error.message)}</p>`;
         categoriesContainer.innerHTML = `<p class="text-center col-span-full text-red-600">Gagal memuat kategori.</p>`;
         showToast('Gagal memuat data. Coba refresh.', 'error');
     }
@@ -274,9 +274,9 @@ function displayBooks(booksToDisplay) {
         const bookCard = document.createElement('div');
         bookCard.classList.add('bg-white', 'p-6', 'rounded-lg', 'shadow-lg', 'flex', 'flex-col', 'items-center', 'text-center');
         bookCard.innerHTML = `
-            <img src="${book.Link_Preview || 'https://placehold.co/200x300?text=Ebook+Cover'}" alt="${book.Judul_Ebook}" class="w-48 h-auto object-cover mb-4 rounded-md shadow">
-            <h3 class="text-xl font-semibold mb-2">${book.Judul_Ebook}</h3>
-            <p class="text-gray-600 text-sm mb-2">Oleh: ${book.Penulis}</p>
+            <img src="${DOMPurify.sanitize(book.Link_Preview || 'https://placehold.co/200x300?text=Ebook+Cover')}" alt="${DOMPurify.sanitize(book.Judul_Ebook)}" class="w-48 h-auto object-cover mb-4 rounded-md shadow">
+            <h3 class="text-xl font-semibold mb-2">${DOMPurify.sanitize(book.Judul_Ebook)}</h3>
+            <p class="text-gray-600 text-sm mb-2">Oleh: ${DOMPurify.sanitize(book.Penulis)}</p>
             <p class="text-lg font-bold text-blue-700 mb-4">${formatRupiah(book.Harga)}</p>
             <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 w-full"
                     data-id="${book.ID_Ebook}"
@@ -307,7 +307,7 @@ function displayCategories(categories) {
         categoryButton.dataset.categoryId = category.id_kategori; // Simpan ID kategori di data-attribute
         const iconClass = getCategoryIcon(category.nama_kategori); // Dapatkan ikon berdasarkan nama kategori
         categoryButton.classList.add('col-span-1', 'bg-gray-200', 'text-gray-800', 'font-semibold', 'py-3', 'px-6', 'rounded-full', 'hover:bg-gray-300', 'transition-colors', 'duration-300', 'flex', 'items-center', 'justify-center');
-        categoryButton.innerHTML = `<i class="${iconClass} mr-2 text-4xl text-blue-600"></i> ${category.nama_kategori}`;
+        categoryButton.innerHTML = `<i class="${iconClass} mr-2 text-4xl text-blue-600"></i> ${DOMPurify.sanitize(category.nama_kategori)}`;
         categoryButton.addEventListener('click', () => filterBooksByCategory(category.id_kategori, categoryButton));
         categoriesContainer.appendChild(categoryButton);
     });
@@ -419,8 +419,8 @@ checkoutForm.addEventListener('submit', async (event) => {
             
             orderStatusDiv.innerHTML = `
                 <h3 class="text-xl font-bold text-green-700 mb-3">Pesanan Berhasil Diterima!</h3>
-                <p class="text-gray-700 mb-2">Terima kasih, **${nama}**! Pesanan Anda dengan **ID Transaksi: ${result.orderId}** telah berhasil dicatat.</p>
-                <p class="text-gray-700 font-semibold mb-3">Total yang harus Anda bayar adalah: <span class="text-blue-600 text-2xl">${totalBayarFormatted}</span></p>
+                <p class="text-gray-700 mb-2">Terima kasih, **${DOMPurify.sanitize(nama)}**! Pesanan Anda dengan **ID Transaksi: ${DOMPurify.sanitize(result.orderId)}** telah berhasil dicatat.</p>
+                <p class="text-gray-700 font-semibold mb-3">Total yang harus Anda bayar adalah: <span class="text-blue-600 text-2xl">${DOMPurify.sanitize(totalBayarFormatted)}</span></p>
                 
                 <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4">
                     <p class="font-bold text-blue-800 mb-2"><i class="fas fa-bank mr-2"></i>Instruksi Pembayaran Manual:</p>
@@ -429,7 +429,7 @@ checkoutForm.addEventListener('submit', async (event) => {
                         <li>**Bank:** BCA</li>
                         <li>**Nomor Rekening:** <span class="font-bold">5120-562-667</span></li>
                         <li>**Atas Nama:** YUSUP TANDI BONE</li>
-                        <li>**Jumlah:** <span class="font-bold text-lg">${totalBayarFormatted}</span></li>
+                        <li>**Jumlah:** <span class="font-bold text-lg">${DOMPurify.sanitize(totalBayarFormatted)}</span></li>
                     </ul>
                     <p class="text-sm text-blue-700 mt-3">Pastikan jumlah transfer sesuai dan sertakan ID Transaksi jika memungkinkan.</p>
                 </div>
@@ -438,8 +438,8 @@ checkoutForm.addEventListener('submit', async (event) => {
                     <p class="font-bold text-yellow-800 mb-2"><i class="fas fa-whatsapp mr-2"></i>Konfirmasi Pembayaran:</p>
                     <p class="text-yellow-700">Setelah transfer, mohon konfirmasi pembayaran Anda ke WhatsApp kami:</p>
                     <p class="text-yellow-700 mt-2">**<a href="https://wa.me/6281234567890" target="_blank" class="text-green-600 hover:underline">GANTI_DENGAN_NOMOR_WA_ANDA</a>**</p>
-                    <p class="text-yellow-700 mt-1">Sertakan **bukti transfer (screenshot)** dan **ID Transaksi: ${result.orderId}**.</p>
-                    <p class="text-sm text-yellow-700 mt-3">Link download e-book akan otomatis dikirimkan ke **email Anda (${payload.email})** setelah pembayaran terkonfirmasi.</p>
+                    <p class="text-yellow-700 mt-1">Sertakan **bukti transfer (screenshot)** dan **ID Transaksi: ${DOMPurify.sanitize(result.orderId)}**.</p>
+                    <p class="text-sm text-yellow-700 mt-3">Link download e-book akan otomatis dikirimkan ke **email Anda (${DOMPurify.sanitize(payload.email)})** setelah pembayaran terkonfirmasi.</p>
                 </div>
             `;
 
@@ -451,7 +451,7 @@ checkoutForm.addEventListener('submit', async (event) => {
         }
     } catch (error) {
         console.error('Error saat checkout:', error);
-        orderStatusDiv.innerHTML = `<p class="text-red-600 font-bold">Gagal memproses pesanan: ${error.message}</p>`;
+        orderStatusDiv.innerHTML = `<p class="text-red-600 font-bold">Gagal memproses pesanan: ${DOMPurify.sanitize(error.message)}</p>`;
         showToast('Terjadi kesalahan saat checkout. Coba lagi.', 'error');
     } finally {
         // Kembalikan status tombol
@@ -489,7 +489,7 @@ if (newsletterForm) {
             const result = await response.json();
 
             if (result.status === 'sukses') {
-                newsletterStatusDiv.innerHTML = `<p class="text-green-600 font-bold">${result.message}</p>`;
+                newsletterStatusDiv.innerHTML = `<p class="text-green-600 font-bold">${DOMPurify.sanitize(result.message)}</p>`;
                 showToast(result.message, 'success');
                 newsletterForm.reset(); // Reset form newsletter
             } else {
@@ -497,7 +497,7 @@ if (newsletterForm) {
             }
         } catch (error) {
             console.error('Error saat submit newsletter:', error);
-            newsletterStatusDiv.innerHTML = `<p class="text-red-600 font-bold">Gagal mendaftar: ${error.message}</p>`;
+            newsletterStatusDiv.innerHTML = `<p class="text-red-600 font-bold">Gagal mendaftar: ${DOMPurify.sanitize(error.message)}</p>`;
             showToast('Terjadi kesalahan saat mendaftar newsletter. Coba lagi.', 'error');
         } finally {
             newsletterSubmitBtn.disabled = false;
