@@ -1,23 +1,30 @@
-# Pustaka Kristen Digital
+# Pustaka Kristen Digital: Sumber Ebook Rohani Kristen, Renungan Harian, dan Studi Alkitab Online
 
-Website Pustaka Kristen Digital adalah sebuah platform online yang didedikasikan untuk menyediakan koleksi e-book rohani Kristen berkualitas. Tujuan utama dari platform ini adalah untuk membantu pembaca bertumbuh dalam iman, hikmat, dan pemahaman akan Firman Tuhan.
+Selamat datang di repositori proyek Pustaka Kristen Digital, sebuah platform online terkemuka yang didedikasikan untuk menyediakan koleksi **ebook rohani Kristen** berkualitas tinggi. Tujuan utama kami adalah mendukung **pertumbuhan iman** Anda melalui **buku rohani digital** yang mendalam, **renungan harian** yang inspiratif, dan **studi Alkitab** yang komprehensif. Temukan **bahan khotbah** dan panduan untuk **belajar Alkitab** yang akan memperkaya pengenalan Anda akan Firman Tuhan.
 
-## Fitur Utama
+## Fitur Utama Pustaka Kristen Digital
 
-- **Koleksi E-book Pilihan:** Menawarkan berbagai macam e-book yang mencakup kategori seperti renungan, studi Alkitab, teologi, kehidupan Kristen, keluarga, dan kesaksian.
-- **Fokus Bacaan:** Kategori yang terstruktur untuk membantu pengguna menemukan bacaan sesuai dengan minat dan kebutuhan rohani mereka.
-- **Keranjang Belanja:** Sistem keranjang belanja yang fungsional untuk proses pemesanan yang mudah.
-- **Formulir Pemesanan:** Checkout yang simpel melalui formulir pemesanan untuk mengirim e-book via email.
-- **Desain Responsif:** Tampilan yang dioptimalkan untuk berbagai perangkat, baik desktop maupun mobile.
-- **Newsletter:** Fitur berlangganan untuk mendapatkan informasi terbaru mengenai e-book, renungan, dan penawaran khusus.
+Platform ini dirancang untuk memberikan pengalaman terbaik dalam menjelajahi dan mendapatkan **buku Kristen** digital:
 
-## Teknologi yang Digunakan
+-   **Koleksi Ebook Pilihan & Terlengkap:** Jelajahi beragam **ebook Kristen** yang mencakup kategori esensial seperti **renungan harian**, **studi Alkitab**, teologi, panduan **kehidupan Kristen**, keluarga, dan kesaksian iman. Setiap **buku rohani digital** dipilih untuk memperdalam pemahaman Anda.
+-   **Fokus Bacaan & Kategori Intuitif:** Sistem kategori yang terstruktur memudahkan Anda menemukan **buku Kristen** dan **ebook rohani** sesuai minat dan kebutuhan rohani spesifik Anda, membantu Anda dalam **belajar Alkitab** secara terarah.
+-   **Sistem Keranjang Belanja yang Mudah:** Proses pemesanan **ebook Kristen** menjadi lebih efisien dengan sistem keranjang belanja yang fungsional dan user-friendly.
+-   **Formulir Pemesanan Simpel & Cepat:** Setelah memilih **buku rohani digital** Anda, proses checkout dirancang sederhana untuk pengiriman **ebook** langsung ke email Anda.
+-   **Desain Responsif & Aksesibilitas:** Nikmati pengalaman membaca yang optimal di berbagai perangkat, baik desktop maupun mobile, memastikan akses mudah ke **renungan harian** dan **studi Alkitab** di mana saja.
+-   **Newsletter Eksklusif:** Berlangganan untuk mendapatkan informasi terbaru mengenai **ebook Kristen** terbaru, **renungan mingguan**, dan penawaran khusus langsung ke kotak masuk Anda.
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Styling:** Tailwind CSS
-- **Hosting & Deployment:** Netlify
+## Teknologi yang Digunakan dalam Pengembangan
 
-## Cara Menjalankan Proyek
+Proyek Pustaka Kristen Digital dibangun dengan teknologi modern untuk performa dan skalabilitas:
+
+-   **Frontend:** HTML, CSS, JavaScript (untuk antarmuka pengguna yang dinamis dan interaktif).
+-   **Styling:** Tailwind CSS (framework CSS utility-first untuk desain yang cepat dan responsif).
+-   **Hosting & Deployment:** Netlify (untuk deployment otomatis dan performa situs yang cepat).
+-   **Backend API (Google Apps Script):** Digunakan untuk mengelola data ebook dan kategori, serta proses pemesanan.
+
+## Cara Menjalankan Proyek Pustaka Kristen Digital Secara Lokal
+
+Untuk menjalankan proyek ini di lingkungan pengembangan lokal Anda:
 
 1.  **Clone repositori ini:**
     ```bash
@@ -27,16 +34,16 @@ Website Pustaka Kristen Digital adalah sebuah platform online yang didedikasikan
     ```bash
     cd website-ebook
     ```
-3.  **Install dependencies (jika ada, seperti untuk Tailwind CSS):**
+3.  **Install dependencies:** Pastikan Node.js dan npm terinstal.
     ```bash
     npm install
     ```
-4.  **Jalankan build script (untuk Tailwind CSS):**
+4.  **Jalankan build script Tailwind CSS:** Ini akan mengkompilasi CSS Anda.
     ```bash
     npm run build
     ```
-5.  Buka file `index.html` di browser Anda.
+5.  **Buka `index.html`:** Buka file `index.html` di browser web pilihan Anda untuk melihat situs secara lokal.
 
 ---
 
-*Dibuat dan dikelola untuk pertumbuhan iman digital.*
+*Pustaka Kristen Digital: Dibuat dan dikelola untuk mendukung pertumbuhan iman Anda di era digital.*
