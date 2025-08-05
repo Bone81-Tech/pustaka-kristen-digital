@@ -1,7 +1,7 @@
 // script.js
 
 // --- KONFIGURASI ---
-const API_URL = 'https://script.google.com/macros/s/AKfycbyP4lGHARmBSvS0gR6rxzTS7982sDMQ4_bx3m96RYs1B_JNNnZmqiAX-o6nJzRArFA/exec'; 
+const API_URL = 'https://script.google.com/macros/s/AKfycbzU8qK1HNEsZdIdhJSRZUEDsIQgyT6rh05FdSxnIcPe4M0rdGPW-DANXbRQ5KKihd0/exec'; 
 // !!! GANTI DENGAN URL API NEWSLETTER ANDA SETELAH DI-DEPLOY !!!
 const NEWSLETTER_API_URL = 'https://script.google.com/macros/s/AKfycbyyfVSQSOWb1eYURJig5B9cw4g1v5eTbdcULQmFOlwBkGtzcbzTM9m_W0sAktpOK3M/exec'; 
 
