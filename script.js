@@ -1,9 +1,11 @@
 // script.js
 
-// --- KONFIGURASI ---
+// --- KONFIGURASI API ---
+// URL untuk API e-commerce utama (memuat buku, checkout)
 const API_URL = 'https://script.google.com/macros/s/AKfycbzU8qK1HNEsZdIdhJSRZUEDsIQgyT6rh05FdSxnIcPe4M0rdGPW-DANXbRQ5KKihd0/exec'; 
-// !!! GANTI DENGAN URL API NEWSLETTER ANDA SETELAH DI-DEPLOY !!!
-const NEWSLETTER_API_URL = 'https://script.google.com/macros/s/AKfycbyyfVSQSOWb1eYURJig5B9cw4g1v5eTbdcULQmFOlwBkGtzcbzTM9m_W0sAktpOK3M/exec'; 
+
+// URL untuk API newsletter terpisah
+const NEWSLETTER_API_URL = 'https://script.google.com/macros/s/AKfycbyvFYWXxLm1J1uhm7HvHcp3TW_qpzIFFCll3YD5Nls2vFhySaK4ILXdHPStI7ON8Kf1/exec'; 
 
 // --- ELEMEN DOM E-COMMERCE ---
 const hamburger = document.getElementById('hamburger');
@@ -38,9 +40,9 @@ const orderSubmitSpinner = document.getElementById('order-submit-spinner');
 const orderStatusDiv = document.getElementById('order-status');
 
 // --- ELEMEN DOM NEWSLETTER ---
-const newsletterForm = document.getElementById('newsletter-form'); // Asumsi Anda punya form dengan ID ini
+const newsletterForm = document.getElementById('newsletter-form');
 const newsletterEmailInput = document.getElementById('newsletter-email');
-const newsletterNameInput = document.getElementById('newsletter-name'); // Opsional, jika Anda ingin mengumpulkan nama
+const newsletterNameInput = document.getElementById('newsletter-name');
 const newsletterSubmitBtn = document.getElementById('newsletter-submit-btn');
 const newsletterStatusDiv = document.getElementById('newsletter-status');
 
@@ -359,7 +361,7 @@ cartCheckoutBtn.addEventListener('click', () => {
     cartSidebar.classList.add('translate-x-full'); // Tutup sidebar
     checkoutModal.classList.remove('hidden'); // Tampilkan modal
     toggleOverlay(true);
-    orderStatusDiv.innerHTML = ''; // Kosongkan pesan status
+    orderStatusDiv.innerHTML = ''; // Kosongkan pesan status order
 });
 
 modalCloseBtn.addEventListener('click', () => {
@@ -395,6 +397,7 @@ checkoutForm.addEventListener('submit', async (event) => {
     orderStatusDiv.innerHTML = '<p class="text-blue-600">Memproses pesanan Anda...</p>';
 
     const payload = {
+        action: 'checkout', // Tambahkan aksi checkout
         nama: nama,
         email: email,
         no_wa: no_wa,
@@ -462,16 +465,15 @@ checkoutForm.addEventListener('submit', async (event) => {
 });
 
 // --- LOGIKA SUBMIT NEWSLETTER ---
-// Pastikan elemen 'newsletter-form' ada di HTML Anda
 if (newsletterForm) {
     newsletterForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const email = newsletterEmailInput.value.trim();
-        const name = newsletterNameInput ? newsletterNameInput.value.trim() : ''; // Nama opsional
+        const nama = newsletterNameInput ? newsletterNameInput.value.trim() : '';
 
         if (!email) {
-            showToast('Email untuk newsletter wajib diisi.', 'error');
+            newsletterStatusDiv.innerHTML = '<p class="text-red-600 font-bold">Email untuk newsletter wajib diisi.</p>';
             return;
         }
 
@@ -484,7 +486,7 @@ if (newsletterForm) {
                 headers: {
                     'Content-Type': 'text/plain;charset=utf-8'
                 },
-                body: JSON.stringify({ email: email, name: name })
+                body: JSON.stringify({ email: email, name: nama })
             });
             const result = await response.json();
 
