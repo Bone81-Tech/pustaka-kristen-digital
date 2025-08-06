@@ -421,28 +421,26 @@ checkoutForm.addEventListener('submit', async (event) => {
             const totalBayarFormatted = formatRupiah(result.totalAmount); // Format total harga ke Rupiah
             
             orderStatusDiv.innerHTML = `
-                <h3 class="text-xl font-bold text-green-700 mb-3">Pesanan Berhasil Diterima!</h3>
-                <p class="text-gray-700 mb-2">Terima kasih, **${DOMPurify.sanitize(nama)}**! Pesanan Anda dengan **ID Transaksi: ${DOMPurify.sanitize(result.orderId)}** telah berhasil dicatat.</p>
-                <p class="text-gray-700 font-semibold mb-3">Total yang harus Anda bayar adalah: <span class="text-blue-600 text-2xl">${DOMPurify.sanitize(totalBayarFormatted)}</span></p>
+                <h3 class="text-lg sm:text-xl font-bold text-green-700 mb-2">Pesanan Berhasil Diterima!</h3>
+                <p class="text-sm text-gray-700 mb-2">Terima kasih, **${DOMPurify.sanitize(nama)}**! ID Transaksi Anda: <br><strong>${DOMPurify.sanitize(result.orderId)}</strong>.</p>
+                <p class="text-sm text-gray-700 font-semibold mb-3">Total bayar: <span class="text-blue-600 text-xl sm:text-2xl">${DOMPurify.sanitize(totalBayarFormatted)}</span></p>
                 
-                <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4">
-                    <p class="font-bold text-blue-800 mb-2"><i class="fas fa-bank mr-2"></i>Instruksi Pembayaran Manual:</p>
-                    <p class="text-blue-700">Mohon lakukan transfer ke rekening bank berikut:</p>
-                    <ul class="list-disc list-inside text-blue-700 ml-4 mt-2">
-                        <li>**Bank:** BCA</li>
-                        <li>**Nomor Rekening:** <span class="font-bold">5120-562-667</span></li>
-                        <li>**Atas Nama:** YUSUP TANDI BONE</li>
-                        <li>**Jumlah:** <span class="font-bold text-lg">${DOMPurify.sanitize(totalBayarFormatted)}</span></li>
+                <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-3">
+                    <p class="font-bold text-blue-800 mb-2 text-sm"><i class="fas fa-bank mr-2"></i>Instruksi Pembayaran:</p>
+                    <ul class="text-sm text-blue-700 ml-4 space-y-1">
+                        <li><strong>Bank:</strong> BCA</li>
+                        <li><strong>No. Rek:</strong> <span class="font-bold">5120-562-667</span></li>
+                        <li><strong>Atas Nama:</strong> YUSUP TANDI BONE</li>
+                        <li><strong>Jumlah:</strong> <span class="font-bold text-base">${DOMPurify.sanitize(totalBayarFormatted)}</span></li>
                     </ul>
-                    <p class="text-sm text-blue-700 mt-3">Pastikan jumlah transfer sesuai dan sertakan ID Transaksi jika memungkinkan.</p>
+                    <p class="text-xs text-blue-700 mt-2">Pastikan jumlah transfer sesuai.</p>
                 </div>
 
-                <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
-                    <p class="font-bold text-yellow-800 mb-2"><i class="fas fa-whatsapp mr-2"></i>Konfirmasi Pembayaran:</p>
-                    <p class="text-yellow-700">Setelah transfer, mohon konfirmasi pembayaran Anda ke WhatsApp kami:</p>
-                    <p class="text-yellow-700 mt-2">**<a href="https://wa.me/6281234567890" target="_blank" class="text-green-600 hover:underline">GANTI_DENGAN_NOMOR_WA_ANDA</a>**</p>
-                    <p class="text-yellow-700 mt-1">Sertakan **bukti transfer (screenshot)** dan **ID Transaksi: ${DOMPurify.sanitize(result.orderId)}**.</p>
-                    <p class="text-sm text-yellow-700 mt-3">Link download e-book akan otomatis dikirimkan ke **email Anda (${DOMPurify.sanitize(payload.email)})** setelah pembayaran terkonfirmasi.</p>
+                <div class="bg-yellow-50 border border-yellow-200 p-3 rounded-lg">
+                    <p class="font-bold text-yellow-800 mb-2 text-sm"><i class="fas fa-whatsapp mr-2"></i>Konfirmasi Pembayaran:</p>
+                    <p class="text-xs text-yellow-700">Setelah transfer, kirim bukti & ID Transaksi ke WA kami:</p>
+                    <p class="text-yellow-700 mt-2">**<a href="https://wa.me/6285211306398" target="_blank" class="text-green-600 hover:underline">085211306398</a>**</p>
+                    <p class="text-xs text-yellow-700 mt-2">E-book akan dikirim ke email <strong>${DOMPurify.sanitize(payload.email)}</strong> setelah konfirmasi.</p>
                 </div>
             `;
 

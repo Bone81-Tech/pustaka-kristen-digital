@@ -22,19 +22,33 @@
     <!-- Open Graph Meta Tags (untuk sharing di media sosial) -->
     <meta property="og:title" content="Pustaka Kristen Digital - Ebook Rohani untuk Pertumbuhan Iman">
     <meta property="og:description" content="Temukan e-book rohani berkualitas untuk pertumbuhan iman Anda. Jelajahi koleksi renungan, studi Alkitab, dan panduan hidup Kristen dari Pustaka Kristen Digital.">
-    <meta property="og:image" content="https://www.pustakakristendigital.com/images/og-image-homepage.png">
-    <meta property="og:url" content="https://www.pustakakristendigital.com">
+    <meta property="og:image" content="https://pustaka-kristen-digital.netlify.app/images/og-image-homepage.png">
+    <meta property="og:url" content="https://pustaka-kristen-digital.netlify.app">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pustaka Kristen Digital - Ebook Rohani untuk Pertumbuhan Iman">
     <meta name="twitter:description" content="Temukan e-book rohani berkualitas untuk pertumbuhan iman Anda. Jelajahi koleksi renungan, studi Alkitab, dan panduan hidup Kristen dari Pustaka Kristen Digital.">
-    <meta name="twitter:image" content="https://www.pustakakristendigital.com/images/og-image-homepage.png">
+    <meta name="twitter:image" content="https://pustaka-kristen-digital.netlify.app/images/og-image-homepage.png">
 
     <link href="./dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pustaka Kristen Digital",
+      "url": "https://pustaka-kristen-digital.netlify.app/",
+      "logo": "https://pustaka-kristen-digital.netlify.app/images/logo-pustaka-digital-kristen.webp",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "pustakakristendigital@gmail.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Header -->
@@ -246,8 +260,8 @@
     </div>
 
     <!-- Checkout Modal -->
-    <div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
-        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
+    <div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-start justify-center overflow-y-auto pt-10 pb-10">
+        <div class="bg-white rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-md">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="text-2xl font-bold">Formulir Pemesanan</h3>
                 <button id="modal-close-btn" class="text-gray-500 hover:text-gray-800">&times;</button>
