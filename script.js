@@ -2,7 +2,7 @@
 
 // --- KONFIGURASI API ---
 // URL untuk API e-commerce utama (memuat buku, checkout)
-const API_URL = 'https://script.google.com/macros/s/AKfycbzU8qK1HNEsZdIdhJSRZUEDsIQgyT6rh05FdSxnIcPe4M0rdGPW-DANXbRQ5KKihd0/exec'; 
+const API_URL = 'https://script.google.com/macros/s/AKfycbwwu0FkRJMzXCYBHyNS3YEBHZW1G6YewOl8xkld7-VLKxJ9IeFEIA1xIxdRFv0d4Ag/exec'; 
 
 // URL untuk API newsletter terpisah
 const NEWSLETTER_API_URL = 'https://script.google.com/macros/s/AKfycbyvFYWXxLm1J1uhm7HvHcp3TW_qpzIFFCll3YD5Nls2vFhySaK4ILXdHPStI7ON8Kf1/exec'; 
