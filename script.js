@@ -5,13 +5,12 @@
 const API_URL = 'https://script.google.com/macros/s/AKfycbxA3fypoC_Pb68tx8fbbE4gbVhPcIkuqZ-d7Jgmf-eqLNL7IauWeKNmFKOsGGdYN4w/exec'; 
 
 // URL untuk API newsletter terpisah
-const NEWSLETTER_API_URL = 'https://script.google.com/macros/s/AKfycbxMiJXrfVcT9MVbnAjBWoXRVoK3QbvGkUHwe-lMqJrOHBtFzD95VbxdkRO0eU6b61QM/exec'; 
+const NEWSLETTER_API_URL = 'https://script.google.com/macros/s/AKfycbwSbVPHYqpdLPvAMbywjTTZjImSzvcwQUC7rOcEuqIiEgqbNaF9ukU699gxnqNGKcmL/exec'; 
 
 // --- ELEMEN DOM E-COMMERCE ---
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileLinks = document.querySelectorAll('.mobile-link');
-
 const cartIcon = document.getElementById('cart-icon');
 const cartCountSpan = document.querySelector('.cart-count');
 const cartSidebar = document.getElementById('cart-sidebar');
@@ -20,14 +19,11 @@ const cartItemsContainer = document.getElementById('cart-items'); // Di sidebar
 const cartTotalPriceSpan = document.getElementById('cart-total-price');
 const cartCheckoutBtn = document.getElementById('cart-checkout');
 const overlay = document.getElementById('overlay');
-
 const categoriesContainer = document.getElementById('categories-container');
 const booksGrid = document.getElementById('books-grid');
 const refreshBooksBtn = document.getElementById('refresh-books-btn');
-
 const toast = document.getElementById('toast');
 const toastMessage = document.getElementById('toast-message');
-
 const checkoutModal = document.getElementById('checkout-modal');
 const modalCloseBtn = document.getElementById('modal-close-btn');
 const checkoutForm = document.getElementById('checkout-form');
@@ -281,8 +277,7 @@ function displayBooks(booksToDisplay) {
             <p class="text-gray-600 text-sm mb-2">Oleh: ${DOMPurify.sanitize(book.Penulis)}</p>
             <p class="text-lg font-bold text-blue-700 mb-4">${formatRupiah(book.Harga)}</p>
             <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 w-full"
-                    data-id="${book.ID_Ebook}"
-                    data-title="${book.Judul_Ebook}">
+                    data-id="${book.ID_Ebook}">
                     Tambahkan ke Keranjang
             </button>
         `;
