@@ -5,7 +5,7 @@
 const API_URL = 'https://script.google.com/macros/s/AKfycbxA3fypoC_Pb68tx8fbbE4gbVhPcIkuqZ-d7Jgmf-eqLNL7IauWeKNmFKOsGGdYN4w/exec'; 
 
 // URL untuk API newsletter terpisah
-const NEWSLETTER_API_URL = 'https://script.google.com/macros/s/AKfycbyvFYWXxLm1J1uhm7HvHcp3TW_qpzIFFCll3YD5Nls2vFhySaK4ILXdHPStI7ON8Kf1/exec'; 
+const NEWSLETTER_API_URL = 'https://script.google.com/macros/s/AKfycbyz_-L5nKBIJYHoHM_-Tjk4C4D9_yMsf2wLL4SMQgZkCwG6NmjVeBWCSsnlds4cy9lkZ/exec'; 
 
 // --- ELEMEN DOM E-COMMERCE ---
 const hamburger = document.getElementById('hamburger');
